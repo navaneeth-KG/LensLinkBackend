@@ -63,5 +63,16 @@ router.get('/:id',async(req,res)=>{
     return res.json(e)
   }
 })
+router.patch('/:id',async(req,res)=>{
+  try{
+    const body=req.body
+    const {id}= req.params
+    const user = await Client.findByIdAndUpdate(id,body)
+    return res.json({message:'details updated'})
+
+  }catch(e){
+    return res.json(e)
+  }
+})
 
 export default router;

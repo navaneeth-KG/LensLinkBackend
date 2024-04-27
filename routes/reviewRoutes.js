@@ -31,7 +31,7 @@ router.get('/service/:id', async (req, res) => {
 router.get('/:pgId', async (req, res) => {
   try {
     const {pgId}= req.params
-    const review= await Review.find({photographer:pgId}).populate(['client'])
+    const review= await Review.find({photographer:pgId}).populate(['client','service'])
     console.log(review);
     return res.json(review)
   } catch (e) {
