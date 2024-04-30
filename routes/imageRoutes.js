@@ -14,7 +14,7 @@ const Router= express.Router()
 
 Router.post('/',upload.single('file'),(req,res)=>{
     try{
-    res.status(200).json({url:`http://localhost:4999/${req.file.filename}`})}catch(e){
+    res.status(200).json({url:`https://lenslink-api.onrender.com/${req.file.filename}`})}catch(e){
         res.status(500).json(e)
     }
 })
