@@ -6,6 +6,7 @@ const likeSchema = Schema({
   ],
 });
 
+
 const schema = Schema({
   image: { type: String, required: true },
   caption: { type: String, required: true },

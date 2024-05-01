@@ -10,7 +10,7 @@ const router = express.Router()
 router.post('/',async(req,res)=>{
  try{
     const body = req.body
-    const service =await  Service.create(body)
+    const service =await Service.create(body)
     return res.json(service)
  }catch(e){
     return res.json(e)
