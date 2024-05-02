@@ -2,7 +2,7 @@ import multer from "multer";
 import express from "express";
 const storage=multer.diskStorage({
     destination:(req,file,cb)=>{
-        cb(null,'uploads/')
+        cb(null,'https://lenslink-api.onrender.com:4999/uploads/')
     },
     filename:(req,file,cb)=>{
         cb(null,file.originalname)
